@@ -9,6 +9,7 @@
  *
  * @author Andrea y Alexis
  */
+
 public class radio_hoja implements Radio
 {
   private boolean onOff;
@@ -136,7 +137,11 @@ public class radio_hoja implements Radio
     } else {
       guardadas[(posicion - 1)] = frecAM;
     } 
-    }
+    
 
+
+    
+ 
   
+}
 }
