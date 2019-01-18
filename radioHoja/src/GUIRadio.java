@@ -86,6 +86,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 153));
         jButton4.setEnabled(false);
         jButton4.setLabel("1");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -94,6 +95,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(153, 204, 255));
         jButton5.setEnabled(false);
         jButton5.setLabel("2");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +104,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setBackground(new java.awt.Color(255, 153, 153));
         jButton6.setEnabled(false);
         jButton6.setLabel("3");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +113,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(204, 255, 153));
         jButton7.setEnabled(false);
         jButton7.setLabel("4");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +122,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton8.setBackground(new java.awt.Color(153, 255, 255));
         jButton8.setEnabled(false);
         jButton8.setLabel("5");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -126,6 +131,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton9.setBackground(new java.awt.Color(204, 153, 255));
         jButton9.setEnabled(false);
         jButton9.setLabel("6");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -168,6 +174,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton10.setBackground(new java.awt.Color(255, 153, 204));
         jButton10.setText("12");
         jButton10.setEnabled(false);
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -176,6 +183,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton11.setBackground(new java.awt.Color(204, 255, 204));
         jButton11.setText("7");
         jButton11.setEnabled(false);
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -184,6 +192,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton12.setBackground(new java.awt.Color(255, 204, 153));
         jButton12.setText("8");
         jButton12.setEnabled(false);
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -192,6 +201,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton13.setBackground(new java.awt.Color(255, 204, 255));
         jButton13.setText("9");
         jButton13.setEnabled(false);
         jButton13.addActionListener(new java.awt.event.ActionListener() {
@@ -200,6 +210,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton14.setBackground(new java.awt.Color(153, 255, 204));
         jButton14.setText("10");
         jButton14.setEnabled(false);
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -208,6 +219,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton15.setBackground(new java.awt.Color(102, 153, 255));
         jButton15.setText("11");
         jButton15.setEnabled(false);
         jButton15.addActionListener(new java.awt.event.ActionListener() {
