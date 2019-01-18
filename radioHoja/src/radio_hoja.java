@@ -29,10 +29,11 @@ public class radio_hoja implements Radio{
   public boolean encendidoRadio(){
         if(onOff){
             onOff = false; 
-        }else{
-            onOff = true; 
+            return false; 
+            }
+        onOff = true;
+        return true;
         } 
-    } 
     
     @Override
     public boolean cambiarAmFm(){
@@ -76,6 +77,7 @@ public class radio_hoja implements Radio{
         return this.frecFM -= 0.2;
     }
     
+    @Override
     public void setFavorto(int posicion){
         if (amfm == true) {
             guardadas[(posicion - 1)] = frecFM;
@@ -96,10 +98,5 @@ public class radio_hoja implements Radio{
             }
         }
         return estacion;
-    }
-    
-     @Override
-    public void setFavorito(int posicion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
