@@ -327,7 +327,7 @@ public class GUIRadio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    radio_hoja radio = new radio_hoja();
+    Radio radio = new radio_hoja();
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         jLabel1.setText(String.format("%.1f",radio.getFavorito(1))); //Guardar No.1
@@ -476,7 +476,7 @@ public class GUIRadio extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-         radio.setFavorto(opciones.getSelectedIndex()+1);
+       
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

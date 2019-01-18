@@ -9,72 +9,134 @@
  *
  * @author Andrea y Alexis
  */
-public class radio_hoja {
+public class radio_hoja implements Radio
+{
+  private boolean onOff;
+  private boolean amfm;
+  private double frecAM;
+  private double frecFM;
+  private double[] guardadas = new double[12];
+  private double e;
+  
+  public radio_hoja()
+  {
+    amfm = true;
+    onOff = false;
+    frecFM = 87.9;
+    frecAM = 530.0;
+  }
+  
+
+
+  @Override
+  public boolean encendidoRadio()
+  {
+    if (onOff) {
+      onOff = false;
+      return false;
+    }
+    onOff = true;
+    return true;
+  }
+  
+
+
+
+  @Override
+  public boolean cambiarAmFm()
+  {
+    if (!amfm) {
+      amfm = true;
+      
+      return amfm;
+    }
+    amfm = false;
     
-    public void onOff(){
-        if(encendido_apagado){
-            encendido_apagado = false; 
-        }else{
-            encendido_apagado = true; 
-        } 
+    return amfm;
+  }
+  
+
+  @Override
+  public double subirFrecuencia()
+  {
+    if (!amfm) {
+      if (frecAM >= 1610.0) {
+        frecAM = 530.0;
+        
+        return frecAM;
+      }
+      
+      return this.frecAM += 10.0;
+    }
+    
+
+
+    if (frecFM >= 107.9) {
+      frecFM = 87.9;
+      
+      return frecFM;
+    }
+    
+
+    return this.frecFM += 0.2;
+  }
+  
+
+
+  @Override
+  public double bajarFrecuencia()
+  {
+    if (!amfm) {
+      if (frecAM <= 530.0D) {
+        frecAM = 1610.0D;
+        
+        return frecAM;
+      }
+      
+      return this.frecAM -= 10.0;
+    }
+    
+
+
+    if (frecFM <= 87.9) {
+      frecFM = 107.9;
+      
+      return frecFM;
+    }
+    
+
+    return this.frecFM -= 0.2;
+  }
+  
+
+
+
+  @Override
+  public double getFavorito(int posicion)
+  {
+    double estacion = 0.0;
+    int espacio = posicion - 1;
+    estacion = guardadas[espacio];
+    if (estacion == 0.0)
+    {
+      if (amfm)
+      {
+        estacion = 87.9;
+      } else {
+        estacion = 530.0;
+      }
+    }
+    return estacion;
+  }
+
+    @Override
+    public void setFavorito(int posicion) {
+       if (amfm == true) {
+      guardadas[(posicion - 1)] = frecFM;
+    } else {
+      guardadas[(posicion - 1)] = frecAM;
     } 
-    public float Switch(){
-        if(amfm){
-            amfm = false;
-        }else{
-            amfm = true;
-        }
-        float a = 0; 
-        return a; 
     }
-    public float siguiente(float a){
-        float numeroemisora = 0; 
-        if (amfm){
-            if (a < 107.9){
-                numeroemisora = (float)(a+0.2);
-            }else{
-                numeroemisora = (float)87.9;
-            }
-        }else{
-            if (a < 1610){
-                numeroemisora = (float)(a + 5.0);
-            }else{
-                numeroemisora = (float)530;
-            }
-        }
-        return numeroemisora;
-    }
-    public float anterior(float a){
-        float numeroemisora = 0;
-        if (amfm){
-            if (a > 87.9){
-                numeroemisora = (float)(a-0.2);
-            }else{
-                numeroemisora = (float)107.9;
-            }
-        }else{
-            if (a > 530){
-                numeroemisora = (float)(a - 5.0);
-            }else{
-                numeroemisora = (float)1610;
-            }
-        }
-        return numeroemisora;
-    }
-    public void guardar(float e, float b){
-        guardadas[b-1] = e;
-    }
-    public float seleccionarFav(int b){
-        float estacion = (float)(0);
-        int espacio = b-1;
-        estacion = guardadas[espacio];
-        if(estacion == (float)0){
-            if (amfm){
-                estacion = (float)87.9;
-            }else{
-                estacion = (float)530;
-            }
-        }
-        return estacion;
-    }
+
+  
 }
