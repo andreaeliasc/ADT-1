@@ -165,6 +165,11 @@ public class GUIRadio extends javax.swing.JFrame {
 
         opciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
         opciones.setEnabled(false);
+        opciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcionesActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(102, 204, 255));
         jButton3.setText("Guardar como favorito");
@@ -476,8 +481,12 @@ public class GUIRadio extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-       
+       radio.setFavorito(opciones.getSelectedIndex()+1);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void opcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_opcionesActionPerformed
 
     /**
      * @param args the command line arguments

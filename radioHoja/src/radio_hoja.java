@@ -16,7 +16,7 @@ public class radio_hoja implements Radio
   private double frecAM;
   private double frecFM;
   private double[] guardadas = new double[12];
-  private double e;
+  
   
   public radio_hoja()
   {
