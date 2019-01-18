@@ -18,9 +18,10 @@ public class GUIRadio extends javax.swing.JFrame {
      */
     public GUIRadio() {
         initComponents();
+       opFM.setSelected(true);
         AMFM.add(opAM);
         AMFM.add(opFM);
-        opFM.setSelected(true);
+        
     }
 
     /**
@@ -57,6 +58,7 @@ public class GUIRadio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton1.setBackground(new java.awt.Color(153, 204, 255));
         jButton1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         jButton1.setText("<<<");
         jButton1.setEnabled(false);
@@ -74,6 +76,7 @@ public class GUIRadio extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(153, 204, 255));
         jButton2.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         jButton2.setText(">>>");
         jButton2.setEnabled(false);
@@ -156,6 +159,7 @@ public class GUIRadio extends javax.swing.JFrame {
         opciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
         opciones.setEnabled(false);
 
+        jButton3.setBackground(new java.awt.Color(102, 204, 255));
         jButton3.setText("Guardar como favorito");
         jButton3.setEnabled(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
