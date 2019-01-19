@@ -2,13 +2,14 @@
 /**
  * Interfaz para el manejo de las caracteristicas basicasde una radio. 
  *
- * @author Pablo Sao
+ * @author Andrea Elias
+ * @author Alexis Estrada
  * @version 1.0
  * @date 13/01/2018
  */
 
 
-public interface Radio
+public interface iRadio
 {
     /**
      * Metodo para manejar el encendido y apagado de la radio

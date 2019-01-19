@@ -10,15 +10,21 @@
  * @author Andrea y Alexis
  */
 
-public class radio_hoja implements Radio
+public class radio_hoja implements iRadio
 {
+   
+    /**
+     * atributos
+     */
   private boolean onOff;
   private boolean amfm;
   private double frecAM;
   private double frecFM;
   private double[] guardadas = new double[12];
   
-  
+  /**
+   * constructor
+   */
   public radio_hoja()
   {
     amfm = true;
@@ -27,7 +33,10 @@ public class radio_hoja implements Radio
     frecAM = 530.0;
   }
   
-
+/**
+ * Metodo para encender o apagar radio
+ * @return 
+ */
 
   @Override
   public boolean encendidoRadio()
@@ -42,7 +51,10 @@ public class radio_hoja implements Radio
   
 
 
-
+/**
+ * metodo para saber si estoy en AM o FM
+ * @return 
+ */
   @Override
   public boolean cambiarAmFm()
   {
@@ -56,7 +68,10 @@ public class radio_hoja implements Radio
     return amfm;
   }
   
-
+/**
+ * metodo para ir a la siguiente estacion
+ * @return 
+ */
   @Override
   public double subirFrecuencia()
   {
@@ -85,6 +100,9 @@ public class radio_hoja implements Radio
 
 
   @Override
+  /**
+   * metodo para regresar a la estacion anterior
+   */
   public double bajarFrecuencia()
   {
     if (!amfm) {
@@ -110,7 +128,11 @@ public class radio_hoja implements Radio
   }
   
 
-
+/** 
+ * obtener favorito segun posicion en arreglo
+ * @param posicion
+ * @return 
+ */
 
   @Override
   public double getFavorito(int posicion)
@@ -130,7 +152,12 @@ public class radio_hoja implements Radio
     return estacion;
   }
 
+  /**
+   * guardar en posicion del arreglo
+   * @param posicion 
+   */
     @Override
+    
     public void setFavorito(int posicion) {
        if (amfm == true) {
       guardadas[(posicion - 1)] = frecFM;
