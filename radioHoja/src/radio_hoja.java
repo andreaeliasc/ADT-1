@@ -21,6 +21,7 @@ public class radio_hoja implements iRadio
   private double frecAM;
   private double frecFM;
   private double[] guardadas = new double[12];
+  private double e;
   
   /**
    * constructor
@@ -106,8 +107,8 @@ public class radio_hoja implements iRadio
   public double bajarFrecuencia()
   {
     if (!amfm) {
-      if (frecAM <= 530.0D) {
-        frecAM = 1610.0D;
+      if (frecAM <= 530.0) {
+        frecAM = 1610.0;
         
         return frecAM;
       }
