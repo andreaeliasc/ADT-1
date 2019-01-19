@@ -7,7 +7,7 @@
 
 /**
  *
- * @author Andrea y 
+ * @author Andrea y Renato
  */
 
 public class radio_hoja implements iRadio
